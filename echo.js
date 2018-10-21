@@ -8,8 +8,8 @@ let secret = properties.get('secret');
 
 // create LINE SDK config from env variables
 const config = {
-  channelAccessToken: token,
-  channelSecret: secret,
+  channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
+  channelSecret: process.env.CHANNEL_SECRET,
 };
 
 // create LINE SDK client
