@@ -1,11 +1,6 @@
 const line = require('@line/bot-sdk');
 const express = require('express');
 
-let PropertiesReader = require('properties-reader');
-let properties = PropertiesReader('./configure/line.properties');
-let token = properties.get('token');
-let secret = properties.get('secret');
-
 // create LINE SDK config from env variables
 const config = {
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
